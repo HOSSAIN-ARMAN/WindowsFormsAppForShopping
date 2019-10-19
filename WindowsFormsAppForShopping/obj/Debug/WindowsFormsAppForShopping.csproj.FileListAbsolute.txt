@@ -1,0 +1,13 @@
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Category.resources
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Customer.resources
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Product.resources
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Properties.Resources.resources
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Supplier.resources
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csproj.GenerateResource.cache
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csproj.CoreCompileInputs.cache
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\bin\Debug\WindowsFormsAppForShopping.exe.config
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\bin\Debug\WindowsFormsAppForShopping.exe
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\bin\Debug\WindowsFormsAppForShopping.pdb
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csprojAssemblyReference.cache
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.exe
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.pdb
