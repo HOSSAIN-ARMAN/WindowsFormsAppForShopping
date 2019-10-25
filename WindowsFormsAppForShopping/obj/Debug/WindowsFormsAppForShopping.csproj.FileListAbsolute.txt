@@ -11,3 +11,17 @@ D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\b
 D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csprojAssemblyReference.cache
 D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.exe
 D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.pdb
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\bin\Debug\WindowsFormsAppForShopping.exe.config
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\bin\Debug\WindowsFormsAppForShopping.exe
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\bin\Debug\WindowsFormsAppForShopping.pdb
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csprojAssemblyReference.cache
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Category.resources
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Customer.resources
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Product.resources
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Properties.Resources.resources
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Supplier.resources
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csproj.GenerateResource.cache
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csproj.CoreCompileInputs.cache
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.exe
+C:\Users\Web App Develop .Net\Desktop\aaaa\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.pdb
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.Purchase.resources

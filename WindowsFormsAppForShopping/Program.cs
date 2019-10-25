@@ -18,6 +18,8 @@ namespace WindowsFormsAppForShopping
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Category());
             Application.Run(new Product());
+            //Application.Run(new Supplier());
+            //Application.Run(new Purchase());
         }
     }
 }

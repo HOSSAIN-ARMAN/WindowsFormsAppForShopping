@@ -27,6 +27,7 @@ namespace WindowsFormsAppForShopping
         private void ProductGroupBox_Enter(object sender, EventArgs e)
         {
             categoryComboBox.DataSource = _categoryManager.DisplayComboCategories();
+
             productDataGridView.DataSource = _productManager.DisplaySaveProducts();
         }
 
@@ -136,6 +137,11 @@ namespace WindowsFormsAppForShopping
             {
                 MessageBox.Show(exception.Message);
             }
+        }
+
+        private void CategoryComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

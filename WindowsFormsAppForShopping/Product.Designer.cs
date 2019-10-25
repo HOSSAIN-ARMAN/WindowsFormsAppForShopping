@@ -194,6 +194,7 @@
             this.categoryComboBox.Size = new System.Drawing.Size(119, 21);
             this.categoryComboBox.TabIndex = 2;
             this.categoryComboBox.ValueMember = "Id";
+            this.categoryComboBox.SelectedIndexChanged += new System.EventHandler(this.CategoryComboBox_SelectedIndexChanged);
             // 
             // modelCategoryBindingSource
             // 
