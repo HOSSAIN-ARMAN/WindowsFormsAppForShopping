@@ -55,5 +55,18 @@ namespace WindowsFormsAppForShopping.Repository
             return supplierInfotList;
 
         }
+        public DataTable DisplayComboSupplier()
+        {
+            string connection = @"Server = AHO-BATIJA; DataBase = SmallBusinessManagementSystem; Integrated Security = True";
+            SqlConnection sqlConnection = new SqlConnection(connection);
+            string query = @"SELECT Id, Name FROM Supplier";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlConnection.Open();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
     }
 }

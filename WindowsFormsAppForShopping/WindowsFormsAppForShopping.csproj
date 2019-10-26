@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="BLL\CategoryManager.cs" />
     <Compile Include="BLL\ProductManager.cs" />
+    <Compile Include="BLL\PurchaseManager.cs" />
     <Compile Include="BLL\SupplierManager.cs" />
     <Compile Include="Category.cs">
       <SubType>Form</SubType>
@@ -62,6 +63,7 @@
     </Compile>
     <Compile Include="Model\ModelCategory.cs" />
     <Compile Include="Model\ModelProduct.cs" />
+    <Compile Include="Model\ModelPurchase.cs" />
     <Compile Include="Model\SupplierModel.cs" />
     <Compile Include="Product.cs">
       <SubType>Form</SubType>
@@ -79,6 +81,7 @@
     </Compile>
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
+    <Compile Include="Repository\PurchaseRepository.cs" />
     <Compile Include="Repository\SupplierRepository.cs" />
     <Compile Include="Supplier.cs">
       <SubType>Form</SubType>
@@ -125,6 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

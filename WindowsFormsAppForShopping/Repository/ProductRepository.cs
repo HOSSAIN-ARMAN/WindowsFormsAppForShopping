@@ -12,7 +12,7 @@ namespace WindowsFormsAppForShopping.Repository
 {
     public class ProductRepository
     {
-       public bool SaveProduct(ModelProduct modelProduct)
+        public bool SaveProduct(ModelProduct modelProduct)
         {
             bool isSaveProduct = false;
             string connection = @"Server = AHO-BATIJA; DataBase = SmallBusinessManagementSystem; Integrated Security = True";
@@ -73,6 +73,71 @@ namespace WindowsFormsAppForShopping.Repository
             }
             sqlConnection.Close();
             return isCodeExits;
+        }
+        public DataTable DisplayComboProducts()
+        {
+            string connection = @"Server = AHO-BATIJA; DataBase = SmallBusinessManagementSystem; Integrated Security = True";
+            SqlConnection sqlConnection = new SqlConnection(connection);
+            string query = @"SELECT Id, Name FROM Products";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlConnection.Open();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+        }
+       
+        public DataTable CategoryComboList(ModelProduct modelProduct)
+        {
+
+
+            string connection = @"Server = AHO-BATIJA; DataBase = SmallBusinessManagementSystem; Integrated Security = True";
+            SqlConnection sqlConnection = new SqlConnection(connection);
+            string query = @"SELECT DISTINCT Name FROM Products WHERE CategoryName = '" + modelProduct.CategoryName+"'";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlConnection.Open();
+
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
+            return dataTable;
+
+            //List<ModelProduct> productComboList = new List<ModelProduct>();
+            //SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            //while (sqlDataReader.Read())
+            //{
+
+            //    modelProduct.Name = sqlDataReader["Name"].ToString();
+
+            //    productComboList.Add(modelProduct);
+            //}
+
+            //sqlConnection.Close();
+            //return productComboList;
+        }
+
+        public List<ModelProduct> ProductComboList(ModelProduct modelProduct)
+        {
+
+
+            string connection = @"Server = AHO-BATIJA; DataBase = SmallBusinessManagementSystem; Integrated Security = True";
+            SqlConnection sqlConnection = new SqlConnection(connection);
+            string query = @"SELECT * FROM Products WHERE Name = '" + modelProduct.Name + "'";
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            sqlConnection.Open();
+            List<ModelProduct> productComboList = new List<ModelProduct>();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+
+                modelProduct.Code = sqlDataReader["Code"].ToString();                
+                productComboList.Add(modelProduct);
+            }
+
+            sqlConnection.Close();
+            return productComboList;
         }
     }
 }

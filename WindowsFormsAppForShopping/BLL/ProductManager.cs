@@ -29,5 +29,20 @@ namespace WindowsFormsAppForShopping.BLL
         {
             return _productRepository.IsProductCodeExits(modelProduct);
         }
+       
+        public DataTable DisplayComboProducts()
+        {
+            return _productRepository.DisplayComboProducts();
+        }
+        public DataTable CategoryComboList(ModelProduct modelProduct)
+        {
+            return _productRepository.CategoryComboList(modelProduct);
+        }
+        public List<ModelProduct> ProductComboList(ModelProduct modelProduct)
+        {
+            return _productRepository.ProductComboList(modelProduct);
+        }
+
+
     }
 }

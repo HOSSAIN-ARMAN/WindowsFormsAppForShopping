@@ -24,5 +24,9 @@ namespace WindowsFormsAppForShopping.BLL
         {
             return _supplierRepository.UpdateSupplierInfo(supplierModel);
         }
+        public DataTable DisplayComboSupplier()
+        {
+            return _supplierRepository.DisplayComboSupplier();
+        }
     }
 }

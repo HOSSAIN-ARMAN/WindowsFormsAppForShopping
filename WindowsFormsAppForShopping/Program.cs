@@ -17,9 +17,9 @@ namespace WindowsFormsAppForShopping
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Category());
-            Application.Run(new Product());
+            //Application.Run(new Product());
             //Application.Run(new Supplier());
-            //Application.Run(new Purchase());
+            Application.Run(new Purchase());
         }
     }
 }

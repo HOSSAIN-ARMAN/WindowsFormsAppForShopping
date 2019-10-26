@@ -15,12 +15,15 @@ CategoryName VARCHAR(50),
 Code VARCHAR(50),
 Name VARCHAR(50),
 ReOrder INT,
-Description VARCHAR(50)
+Description VARCHAR(50),
+Constant int DEFAULT 1
 )
 
-
+SELECT distinct Name FROM Products WHERE CategoryName = 'Mobile'
 
 SELECT * FROM Products
+
+SELECT (Id) FROM Products WHERE Name = 'i-phone'
 
 --SELECT CategoryName, Code, Name, ReOrder, Description
 --FROM[Products] JOIN Categories
@@ -39,5 +42,36 @@ SELECT * FROM Supplier;
 
 CREATE TABLE Purchase(
 Id INT identity(1,1)PRIMARY KEY,
-
+ProductCode VARCHAR(50),
+ManufactureDate VARCHAR(50),
+ExpireDate VARCHAR(50),
+Quantity INT,
+UnitePrice INT,
+TotalPrice INT,
+PreviousUnitPrice INT DEFAULT 0,
+PreviousMRP INT DEFAULT 0,
+Mrp INT,
+Remarks VARCHAR(50),
+SupplierDate VARCHAR(50),
+supplierInvoice INT,
+SupplierName VARCHAR(50),
+ConstantValue INT DEFAULT 1
 )
+
+
+SELECT *FROM Purchase
+
+CREATE TABLE AddPurchase(
+Id INT identity(1,1)PRIMARY KEY,
+ProductCode VARCHAR(50),
+ManufactureDate VARCHAR(50),
+ExpireDate VARCHAR(50),
+Quantity INT,
+UnitePrice INT,
+TotalPrice INT,
+Mrp INT,
+Remarks VARCHAR(50),
+ConstantValue INT DEFAULT 1
+)
+
+SELECT *FROM AddPurchase
