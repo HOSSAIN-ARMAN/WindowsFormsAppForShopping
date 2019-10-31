@@ -132,7 +132,8 @@ namespace WindowsFormsAppForShopping.Repository
             while (sqlDataReader.Read())
             {
 
-                modelProduct.Code = sqlDataReader["Code"].ToString();                
+                modelProduct.Code = sqlDataReader["Code"].ToString();
+                modelProduct.Name = sqlDataReader["Name"].ToString();
                 productComboList.Add(modelProduct);
             }
 

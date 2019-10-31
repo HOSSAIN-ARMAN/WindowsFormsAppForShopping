@@ -38,6 +38,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ProductGroupBox = new System.Windows.Forms.GroupBox();
+            this.expiredateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.manufracturedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.addButton = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.remarkRichTextBox = new System.Windows.Forms.RichTextBox();
@@ -67,8 +69,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.purchaseDataGridView = new System.Windows.Forms.DataGridView();
             this.submitButton = new System.Windows.Forms.Button();
-            this.manufracturedateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.expiredateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.supplierModelBindingSource)).BeginInit();
             this.ProductGroupBox.SuspendLayout();
@@ -85,9 +87,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(169, 35);
+            this.groupBox1.Location = new System.Drawing.Point(169, 44);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(357, 102);
+            this.groupBox1.Size = new System.Drawing.Size(357, 108);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Supplier";
@@ -111,6 +113,7 @@
             this.supplierInvoiceTextBox.Name = "supplierInvoiceTextBox";
             this.supplierInvoiceTextBox.Size = new System.Drawing.Size(200, 20);
             this.supplierInvoiceTextBox.TabIndex = 2;
+            this.supplierInvoiceTextBox.TextChanged += new System.EventHandler(this.SupplierInvoiceTextBox_TextChanged);
             // 
             // supplierDateTimePicker
             // 
@@ -181,6 +184,20 @@
             this.ProductGroupBox.TabIndex = 1;
             this.ProductGroupBox.TabStop = false;
             this.ProductGroupBox.Text = "Product";
+            // 
+            // expiredateTimePicker
+            // 
+            this.expiredateTimePicker.Location = new System.Drawing.Point(132, 142);
+            this.expiredateTimePicker.Name = "expiredateTimePicker";
+            this.expiredateTimePicker.Size = new System.Drawing.Size(184, 20);
+            this.expiredateTimePicker.TabIndex = 12;
+            // 
+            // manufracturedateTimePicker
+            // 
+            this.manufracturedateTimePicker.Location = new System.Drawing.Point(132, 118);
+            this.manufracturedateTimePicker.Name = "manufracturedateTimePicker";
+            this.manufracturedateTimePicker.Size = new System.Drawing.Size(184, 20);
+            this.manufracturedateTimePicker.TabIndex = 11;
             // 
             // addButton
             // 
@@ -319,6 +336,7 @@
             this.codeTextBox.Name = "codeTextBox";
             this.codeTextBox.Size = new System.Drawing.Size(121, 20);
             this.codeTextBox.TabIndex = 2;
+            this.codeTextBox.TextChanged += new System.EventHandler(this.CodeTextBox_TextChanged);
             // 
             // productComboBox
             // 
@@ -405,6 +423,7 @@
             this.purchaseDataGridView.Name = "purchaseDataGridView";
             this.purchaseDataGridView.Size = new System.Drawing.Size(776, 118);
             this.purchaseDataGridView.TabIndex = 2;
+            this.purchaseDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PurchaseDataGridView_CellContentClick);
             // 
             // submitButton
             // 
@@ -416,25 +435,30 @@
             this.submitButton.UseVisualStyleBackColor = true;
             this.submitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
-            // manufracturedateTimePicker
+            // textBox1
             // 
-            this.manufracturedateTimePicker.Location = new System.Drawing.Point(132, 118);
-            this.manufracturedateTimePicker.Name = "manufracturedateTimePicker";
-            this.manufracturedateTimePicker.Size = new System.Drawing.Size(184, 20);
-            this.manufracturedateTimePicker.TabIndex = 11;
+            this.textBox1.Location = new System.Drawing.Point(530, 11);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged_1);
             // 
-            // expiredateTimePicker
+            // button1
             // 
-            this.expiredateTimePicker.Location = new System.Drawing.Point(132, 142);
-            this.expiredateTimePicker.Name = "expiredateTimePicker";
-            this.expiredateTimePicker.Size = new System.Drawing.Size(184, 20);
-            this.expiredateTimePicker.TabIndex = 12;
+            this.button1.Location = new System.Drawing.Point(636, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Purchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 554);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.submitButton);
             this.Controls.Add(this.purchaseDataGridView);
             this.Controls.Add(this.ProductGroupBox);
@@ -451,6 +475,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.modelCategoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.purchaseDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -496,5 +521,7 @@
         private System.Windows.Forms.BindingSource modelProductBindingSource;
         private System.Windows.Forms.DateTimePicker expiredateTimePicker;
         private System.Windows.Forms.DateTimePicker manufracturedateTimePicker;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

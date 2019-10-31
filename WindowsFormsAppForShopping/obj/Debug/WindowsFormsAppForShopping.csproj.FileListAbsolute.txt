@@ -24,3 +24,5 @@ D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\o
 D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csproj.CoreCompileInputs.cache
 D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.exe
 D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.pdb
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.csprojAssemblyReference.cache
+D:\BITM.net-project-work\WindowsFormsAppForShopping\WindowsFormsAppForShopping\obj\Debug\WindowsFormsAppForShopping.SalesModule.resources

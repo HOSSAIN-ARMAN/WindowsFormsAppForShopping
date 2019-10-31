@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\CategoryManager.cs" />
+    <Compile Include="BLL\CustomerManager.cs" />
     <Compile Include="BLL\ProductManager.cs" />
     <Compile Include="BLL\PurchaseManager.cs" />
     <Compile Include="BLL\SupplierManager.cs" />
@@ -62,6 +63,7 @@
       <DependentUpon>Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ModelCategory.cs" />
+    <Compile Include="Model\ModelCustomer.cs" />
     <Compile Include="Model\ModelProduct.cs" />
     <Compile Include="Model\ModelPurchase.cs" />
     <Compile Include="Model\SupplierModel.cs" />
@@ -80,9 +82,16 @@
       <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
     <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\CustomerRepository.cs" />
     <Compile Include="Repository\ProductRepository.cs" />
     <Compile Include="Repository\PurchaseRepository.cs" />
     <Compile Include="Repository\SupplierRepository.cs" />
+    <Compile Include="SalesModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesModule.Designer.cs">
+      <DependentUpon>SalesModule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Supplier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,10 +119,14 @@
     <EmbeddedResource Include="Purchase.resx">
       <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SalesModule.resx">
+      <DependentUpon>SalesModule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.ModelCategory.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.ModelCustomer.datasource" />
     <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.ModelProduct.datasource" />
     <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.SupplierModel.datasource" />
     <None Include="Properties\Settings.settings">

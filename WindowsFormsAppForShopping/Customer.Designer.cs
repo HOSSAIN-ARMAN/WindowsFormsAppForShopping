@@ -28,42 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.customerDataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
+            this.loyaltyPointTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.contactTextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.customerEmailTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.customerAddresstextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.customerNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.customerCodetextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contactDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loyaltyPointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelCustomerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelCustomerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.customerDataGridView);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.saveButton);
+            this.groupBox1.Controls.Add(this.loyaltyPointTextBox);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.contactTextBox);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.customerEmailTextBox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.customerAddresstextBox);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.customerNameTextBox);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.customerCodetextBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(24, 62);
             this.groupBox1.Name = "groupBox1";
@@ -73,27 +83,38 @@
             // 
             // customerDataGridView
             // 
+            this.customerDataGridView.AutoGenerateColumns = false;
             this.customerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.customerCodeDataGridViewTextBoxColumn,
+            this.customerNameDataGridViewTextBoxColumn,
+            this.customerAddressDataGridViewTextBoxColumn,
+            this.customerEmailDataGridViewTextBoxColumn,
+            this.contactDataGridViewTextBoxColumn,
+            this.loyaltyPointDataGridViewTextBoxColumn});
+            this.customerDataGridView.DataSource = this.modelCustomerBindingSource;
             this.customerDataGridView.Location = new System.Drawing.Point(6, 222);
             this.customerDataGridView.Name = "customerDataGridView";
             this.customerDataGridView.Size = new System.Drawing.Size(752, 150);
             this.customerDataGridView.TabIndex = 3;
             // 
-            // button1
+            // saveButton
             // 
-            this.button1.Location = new System.Drawing.Point(263, 176);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
+            this.saveButton.Location = new System.Drawing.Point(263, 176);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.TabIndex = 2;
+            this.saveButton.Text = "Save";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
-            // textBox6
+            // loyaltyPointTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(238, 150);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 1;
+            this.loyaltyPointTextBox.Location = new System.Drawing.Point(238, 150);
+            this.loyaltyPointTextBox.Name = "loyaltyPointTextBox";
+            this.loyaltyPointTextBox.Size = new System.Drawing.Size(100, 20);
+            this.loyaltyPointTextBox.TabIndex = 1;
             // 
             // label6
             // 
@@ -104,12 +125,12 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Loyalty Point";
             // 
-            // textBox5
+            // contactTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(238, 124);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 1;
+            this.contactTextBox.Location = new System.Drawing.Point(238, 124);
+            this.contactTextBox.Name = "contactTextBox";
+            this.contactTextBox.Size = new System.Drawing.Size(100, 20);
+            this.contactTextBox.TabIndex = 1;
             // 
             // label5
             // 
@@ -120,12 +141,12 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Contact";
             // 
-            // textBox4
+            // customerEmailTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(238, 98);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 1;
+            this.customerEmailTextBox.Location = new System.Drawing.Point(238, 98);
+            this.customerEmailTextBox.Name = "customerEmailTextBox";
+            this.customerEmailTextBox.Size = new System.Drawing.Size(100, 20);
+            this.customerEmailTextBox.TabIndex = 1;
             // 
             // label4
             // 
@@ -136,12 +157,12 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Email";
             // 
-            // textBox3
+            // customerAddresstextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 1;
+            this.customerAddresstextBox.Location = new System.Drawing.Point(238, 72);
+            this.customerAddresstextBox.Name = "customerAddresstextBox";
+            this.customerAddresstextBox.Size = new System.Drawing.Size(100, 20);
+            this.customerAddresstextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -152,12 +173,12 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Address";
             // 
-            // textBox2
+            // customerNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.customerNameTextBox.Location = new System.Drawing.Point(238, 46);
+            this.customerNameTextBox.Name = "customerNameTextBox";
+            this.customerNameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.customerNameTextBox.TabIndex = 1;
             // 
             // label2
             // 
@@ -168,12 +189,12 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
             // 
-            // textBox1
+            // customerCodetextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.customerCodetextBox.Location = new System.Drawing.Point(238, 20);
+            this.customerCodetextBox.Name = "customerCodetextBox";
+            this.customerCodetextBox.Size = new System.Drawing.Size(100, 20);
+            this.customerCodetextBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -200,6 +221,52 @@
             this.button2.Text = "Search";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // customerCodeDataGridViewTextBoxColumn
+            // 
+            this.customerCodeDataGridViewTextBoxColumn.DataPropertyName = "CustomerCode";
+            this.customerCodeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.customerCodeDataGridViewTextBoxColumn.Name = "customerCodeDataGridViewTextBoxColumn";
+            // 
+            // customerNameDataGridViewTextBoxColumn
+            // 
+            this.customerNameDataGridViewTextBoxColumn.DataPropertyName = "CustomerName";
+            this.customerNameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            // 
+            // customerAddressDataGridViewTextBoxColumn
+            // 
+            this.customerAddressDataGridViewTextBoxColumn.DataPropertyName = "CustomerAddress";
+            this.customerAddressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.customerAddressDataGridViewTextBoxColumn.Name = "customerAddressDataGridViewTextBoxColumn";
+            // 
+            // customerEmailDataGridViewTextBoxColumn
+            // 
+            this.customerEmailDataGridViewTextBoxColumn.DataPropertyName = "CustomerEmail";
+            this.customerEmailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.customerEmailDataGridViewTextBoxColumn.Name = "customerEmailDataGridViewTextBoxColumn";
+            // 
+            // contactDataGridViewTextBoxColumn
+            // 
+            this.contactDataGridViewTextBoxColumn.DataPropertyName = "Contact";
+            this.contactDataGridViewTextBoxColumn.HeaderText = "Contact";
+            this.contactDataGridViewTextBoxColumn.Name = "contactDataGridViewTextBoxColumn";
+            // 
+            // loyaltyPointDataGridViewTextBoxColumn
+            // 
+            this.loyaltyPointDataGridViewTextBoxColumn.DataPropertyName = "LoyaltyPoint";
+            this.loyaltyPointDataGridViewTextBoxColumn.HeaderText = "Loyalty Point";
+            this.loyaltyPointDataGridViewTextBoxColumn.Name = "loyaltyPointDataGridViewTextBoxColumn";
+            // 
+            // modelCustomerBindingSource
+            // 
+            this.modelCustomerBindingSource.DataSource = typeof(WindowsFormsAppForShopping.Model.ModelCustomer);
+            // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,9 +277,11 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Customer";
             this.Text = "Customer";
+            this.Load += new System.EventHandler(this.Customer_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelCustomerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,20 +291,28 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView customerDataGridView;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.TextBox loyaltyPointTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox contactTextBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox customerEmailTextBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox customerAddresstextBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox customerNameTextBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox customerCodetextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerAddressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn customerEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contactDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loyaltyPointDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource modelCustomerBindingSource;
     }
 }
