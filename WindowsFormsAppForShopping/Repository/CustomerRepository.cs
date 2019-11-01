@@ -30,7 +30,7 @@ namespace WindowsFormsAppForShopping.Repository
         public DataTable DisplayCustomerInfo()
         {
             SqlConnection sqlConnection = new SqlConnection(connection);
-            string query = @"SELECT * FROM Customer";
+            string query = @"SELECT Id, CustomerName FROM Customer";
             SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
             sqlConnection.Open();
 

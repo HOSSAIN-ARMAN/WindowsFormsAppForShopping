@@ -21,7 +21,7 @@ namespace WindowsFormsAppForShopping
 
 
 
-                purchaseDataGridView.ColumnCount = 11;
+                purchaseDataGridView.ColumnCount = 13;
            
                 purchaseDataGridView.Columns[0].Name = "Product Code";
                 purchaseDataGridView.Columns[1].Name = "Manufracture date";
@@ -34,12 +34,74 @@ namespace WindowsFormsAppForShopping
                 purchaseDataGridView.Columns[8].Name = "Supplier Date";
                 purchaseDataGridView.Columns[9].Name = "Supplier Invoice";
                 purchaseDataGridView.Columns[10].Name = "Supplier Name";
+                purchaseDataGridView.Columns[11].Name = "PurchaseCategory";
+                purchaseDataGridView.Columns[12].Name = "PurchaseProduct";
+                //purchaseDataGridView.Columns[11].Name = "Action";
+            DataGridViewButtonColumn editButton = new DataGridViewButtonColumn();
+            {
+                editButton.Name = "edit";
+                editButton.HeaderText = "Edit";
+                editButton.Text = "Edit";
+                editButton.UseColumnTextForButtonValue = true;
+                this.purchaseDataGridView.Columns.Add(editButton);
+            }
+            DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn();
+            {
+                deleteButton.Name = "delete";
+                deleteButton.HeaderText = "Delete";
+                deleteButton.Text = "Delete";
+                deleteButton.UseColumnTextForButtonValue = true;               
+                this.purchaseDataGridView.Columns.Add(deleteButton);
+            }
 
-                //purchaseDataGridView.ColumnCount++;
-         
-            
+            purchaseDataGridView.Columns[1].Width = 80;
+            purchaseDataGridView.Columns[2].Width = 80;
+            purchaseDataGridView.Columns[3].Width = 50;
+            purchaseDataGridView.Columns[4].Width = 70;
+            purchaseDataGridView.Columns[5].Width = 70;
+            purchaseDataGridView.Columns[6].Width = 80;
+            purchaseDataGridView.Columns[7].Width = 60;
+
+            purchaseDataGridView.Columns[8].Visible = false;
+            purchaseDataGridView.Columns[9].Visible = false;
+            purchaseDataGridView.Columns[10].Visible = false;
+            purchaseDataGridView.Columns[11].Visible = false;
+            purchaseDataGridView.Columns[12].Visible = false;
+
+
+            //gvEmployees.AutoGenerateColumns = false;
+            //gvEmployees.ColumnCount = 4;
+
+
+            //DataGridViewButtonColumn SelectButton = new DataGridViewButtonColumn();
+            //SelectButton.Name = "Select";
+            //SelectButton.Text = "Select";
+            //SelectButton.UseColumnTextForButtonValue = true;
+            //if (gvEmployees.Columns["Select"] == null)
+            //{
+            //    gvEmployees.Columns.Insert(0, SelectButton);
+            //}
+
+            //DataGridViewButtonColumn DeleteButton = new DataGridViewButtonColumn();
+            //DeleteButton.Name = "Delete";
+            //DeleteButton.Text = "Delete";
+            //DeleteButton.UseColumnTextForButtonValue = true;
+            //if (gvEmployees.Columns["Delete"] == null)
+            //{
+            //    gvEmployees.Columns.Insert(1, DeleteButton);
+            //}
+
+            //gvEmployees.Columns[2].Name = "EmployeeID";
+            //gvEmployees.Columns[2].HeaderText = "EmployeeID";
+            //gvEmployees.Columns[2].DataPropertyName = "EmployeeID";
+
+
+
+            //purchaseDataGridView.ColumnCount++;
+
+
             //purchaseDataGridView.Columns[11].Name = "";
-            
+
 
 
         }
@@ -128,14 +190,15 @@ namespace WindowsFormsAppForShopping
             _modelPurchase.Quantity = Convert.ToInt32(productQtytextBox.Text);
             if (string.IsNullOrEmpty(productUnittextBox.Text))
             {
-
-                return;
+              
             }
             
             _modelPurchase.UnitePrice = Convert.ToInt32(productUnittextBox.Text);
 
             int totalPrice = _modelPurchase.Quantity * _modelPurchase.UnitePrice;
             totalProductTextBox.Text = totalPrice.ToString();
+            int mrpUnitPrice = (_modelPurchase.UnitePrice + ((_modelPurchase.UnitePrice*25)/100));
+            mrpTextBox.Text = mrpUnitPrice.ToString();
         }
 
         private void GroupBox1_Enter(object sender, EventArgs e)
@@ -155,21 +218,25 @@ namespace WindowsFormsAppForShopping
         private void AddButton_Click(object sender, EventArgs e)
         {
             
-            AddData(codeTextBox.Text, manufracturedateTimePicker.Value.ToString(), expiredateTimePicker.Value.ToString(), productQtytextBox.Text, productUnittextBox.Text, totalProductTextBox.Text, mrpTextBox.Text, remarkRichTextBox.Text, supplierDateTimePicker.Value.ToString(), supplierInvoiceTextBox.Text, supplierComboBox.Text);
-            //remarkRichTextBox.Clear();
-            //productQtytextBox.Clear();            
-            //totalProductTextBox.Clear();
-            //mrpTextBox.Clear();
-            //availAbleQtyTextBox.Clear();
-            //previousUnitTextBox.Clear();
-            //previousMrpTextBox.Clear();
-            
+            AddData(codeTextBox.Text, manufracturedateTimePicker.Value.ToString(), expiredateTimePicker.Value.ToString(), productQtytextBox.Text, productUnittextBox.Text, totalProductTextBox.Text, mrpTextBox.Text, remarkRichTextBox.Text, supplierDateTimePicker.Value.ToString(), supplierInvoiceTextBox.Text, supplierComboBox.Text, categoryComboBox.Text, productComboBox.Text);
+            remarkRichTextBox.Clear();
+            productQtytextBox.Clear();
+            totalProductTextBox.Clear();
+            mrpTextBox.Clear();
+            availAbleQtyTextBox.Clear();
+            previousUnitTextBox.Clear();
+            previousMrpTextBox.Clear();
+
         }
-        private void AddData(string code, string manufracture, string expire, string productQty, string productUnitPrice, string totalPrice, string mrp, string remark, string suplierDate, string supplirInvoice, string supplierName)
+        private void AddData(string code, string manufracture, string expire, string productQty, string productUnitPrice, string totalPrice, string mrp, string remark, string suplierDate, string supplirInvoice, string supplierName, string purchaseCategory, string purchaseProduct)
         {
             
-            string[] row = { code, manufracture, expire, productQty , productUnitPrice , totalPrice , mrp, remark, suplierDate , supplirInvoice, supplierName };
+            string[] row = { code, manufracture, expire, productQty , productUnitPrice , totalPrice , mrp, remark, suplierDate , supplirInvoice, supplierName, purchaseCategory, purchaseProduct };
             purchaseDataGridView.Rows.Add(row);
+
+           
+
+
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -189,6 +256,8 @@ namespace WindowsFormsAppForShopping
                 _modelPurchase.SupplierDate = purchaseDataGridView.Rows[i].Cells[8].Value.ToString();
                 _modelPurchase.supplierInvoice = purchaseDataGridView.Rows[i].Cells[9].Value.ToString();
                 _modelPurchase.SupplierName = purchaseDataGridView.Rows[i].Cells[10].Value.ToString();
+                _modelPurchase.purchaseCategory = purchaseDataGridView.Rows[i].Cells[11].Value.ToString();
+                _modelPurchase.purchaseProduct = purchaseDataGridView.Rows[i].Cells[12].Value.ToString();
                 isAdd = _purchaseManager.SubmitPurchase(_modelPurchase);
             }
            
@@ -297,6 +366,11 @@ namespace WindowsFormsAppForShopping
         }
 
         private void TextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductQtytextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

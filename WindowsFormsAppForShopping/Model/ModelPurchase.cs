@@ -20,7 +20,8 @@ namespace WindowsFormsAppForShopping.Model
         public string SupplierDate { set; get; }
         public string supplierInvoice { set; get; }
         public string SupplierName { set; get; }
-
+        public string purchaseCategory { set; get; }
+        public string purchaseProduct { set; get; }
         public int ConstantValue { set; get; }
 
     }

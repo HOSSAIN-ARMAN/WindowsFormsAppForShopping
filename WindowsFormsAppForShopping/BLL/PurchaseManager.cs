@@ -35,5 +35,21 @@ namespace WindowsFormsAppForShopping.BLL
         {
             return _purchaseRepository.PreviousMRP(modelPurchase);
         }
+        public DataTable PurchaseCategory()
+        {
+            return _purchaseRepository.PurchaseCategory();
+        }
+        public DataTable PurchaseProduct(ModelPurchase modelPurchase)
+        {
+            return _purchaseRepository.PurchaseProduct(modelPurchase);
+        }
+        public string AvaiablePurchaseQuantity(ModelPurchase modelPurchase)
+        {
+            return _purchaseRepository.AvaiablePurchaseQuantity(modelPurchase);
+        }
+        public string TotalMrp(ModelPurchase modelPurchase)
+        {
+            return _purchaseRepository.TotalMrp(modelPurchase);
+        }
     }
 }

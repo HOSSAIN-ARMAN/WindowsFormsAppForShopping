@@ -75,26 +75,30 @@ SELECT * FROM Supplier;
 SELECT *FROM Purchase
 
 CREATE TABLE AddPurchase(
-Id INT identity(1,1)PRIMARY KEY,
-ProductCode VARCHAR(50),
-ManufactureDate VARCHAR(50),
+Id INT IDENTITY(2019, 0001) PRIMARY KEY,
+ProductCode VARCHAR(255),
+ManufactureDate VARCHAR(255),
 ExpireDate VARCHAR(50),
 Quantity INT,
 UnitePrice INT,
 TotalPrice INT,
 Mrp INT,
-Remarks VARCHAR(50),
-SupplierDate VARCHAR(50),
-supplierInvoice Varchar(50),
-SupplierName VARCHAR(50),
---ConstantValue INT DEFAULT 1
+Remarks VARCHAR(255),
+SupplierDate VARCHAR(255),
+supplierInvoice Varchar(255),
+SupplierName VARCHAR(255),
+purchaseCategory VARCHAR(255),
+purchaseProduct VARCHAR(255),
+ConstantValue INT DEFAULT 1
 )
 
 SELECT * FROM AddPurchase
+
+
 SELECT SUM(Quantity) FROM AddPurchase WHERE ProductCode = 'Pizza ( f999 )'
 
 SELECT TOP (1)UnitePrice FROM AddPurchase WHERE ProductCode = 'Pizza ( f999 )'
 
-SELECT  TOP(1)UnitePrice FROM AddPurchase WHERE ProductCode = 'Pizza ( f999 )' ORDER BY UnitePrice DESC 
+SELECT  TOP(1)UnitePrice FROM AddPurchase WHERE ProductCode = 'Burger ( f555 )' ORDER BY UnitePrice DESC 
 
 

@@ -128,6 +128,7 @@
     <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.ModelCategory.datasource" />
     <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.ModelCustomer.datasource" />
     <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.ModelProduct.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.ModelPurchase.datasource" />
     <None Include="Properties\DataSources\WindowsFormsAppForShopping.Model.SupplierModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
